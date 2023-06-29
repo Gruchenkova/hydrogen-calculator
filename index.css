@@ -385,3 +385,64 @@ input[type="text"]:disabled {
         flex-direction: column;
     }
 }
+
+.container_acc {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    color: #012169 !important;
+}
+
+#accordionPlusMinus .accordion-button, #accordionPlusMinus2 .accordion-button {
+    flex-direction: row-reverse;
+    justify-content: start;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.collapsed {
+    border-width: 1px 0px 1px 0 !important; /* top right bottom left */
+    border-style: solid;
+    border-color: #EEF1F6;
+}
+
+.accordion-item {
+    border: none!important;
+}
+
+#accordionPlusMinus .accordion-button:not(.collapsed), #accordionPlusMinus2 .accordion-button:not(.collapsed) {
+    color: #012169 !important;
+}
+#accordionPlusMinus .accordion-button:not(.collapsed)::after, #accordionPlusMinus2 .accordion-button:not(.collapsed)::after {
+    margin-left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 2'%3E%3Cpath fill='none' stroke='%230047BB' stroke-linecap='round' stroke-width='2' d='M8 1H1m7 0h7'/%3E%3C/svg%3E");
+    transform-origin: 50% 25%;
+}
+#accordionPlusMinus .accordion-button::after, #accordionPlusMinus2 .accordion-button::after {
+    width: 1.25rem;
+    height: 1.25rem;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v7m0 7V8m0 0H1m7 0h7' stroke='%230047BB' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    justify-content: start;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-radius: 0px!important;
+}
+
+.accordion-button {
+    color: #012169 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ffffff!important;
+}
+
+.accordion-button:focus {
+    border-width: 1px 0px 1px 0 !important; /* top right bottom left */
+    border-style: solid;
+    border-color: #EEF1F6!important;
+    box-shadow: none!important;
+}
