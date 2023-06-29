@@ -446,3 +446,13 @@ input[type="text"]:disabled {
     border-color: #EEF1F6!important;
     box-shadow: none!important;
 }
+
+.tooltip-inner {
+    font-size: 12px;
+    background-color: #EEF1F6;
+    opacity: 1 !important;
+}
+
+.tooltip-arrow {
+    display: none!important;
+}
