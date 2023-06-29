@@ -23,7 +23,7 @@
 <div class="container" style="margin-top: 25px">
     <div class="row mb-5" style="display: flex; justify-content: center">
         <nav id="menu">
-            <div><a class="jump_link_btn blue -btn -txt" onclick="onHydrogen()">Blue Hydrogen Model</a></div>
+            <div><a class="jump_link_btn blue -btn -txt" onclick="onHydrogen()">Low Carbon/Blue H<sub>2</sub></a></div>
             <div><a class="jump_link_btn light_blue navy_col -btn" id="btnAmmonia" onclick="onAmmonia()">Blue Ammonia
                 Model</a></div>
             <div><a class="jump_link_btn green -btn navy_col" onclick="onGreen()">Green Hydrogen Model</a></div>
@@ -36,11 +36,11 @@
         <form action="" id="Dashboard">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center mb-3" id="hydrogenCalc">Blue Hydrogen Financial Model</h1>
+                    <h1 class="text-center mb-3" id="hydrogenCalc">Low Carbon/Blue Hydrogen Financial Model</h1>
                 </div>
             </div>
             <div class="col-md-8 description">
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</span>
+                <span>Low carbon/Blue hydrogen is produced by reforming natural gas and capturing the CO2 using carbon capture and storage equipment. This model includes three different technologies for comparison: steam methane reforming (“SMR”) as a reference, SMR with 90% carbon capture and storage (“CCS”), and autothermal reforming (“ATR”) with gas heated reforming  (“GTR”) and CCS.</span>
             </div>
             <div class="row mt-3 box_shadow" style="display: flex; justify-content: center;">
                 <div class="col-md-4 p-4 input_wr">
@@ -101,7 +101,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="row form-group mb-1">
+                    <div class="row form-group mb-1" style="display: none">
                         <label class="col-md-8" style="width: 60%">Electricity Export</label>
                         <div class="col-md-4" style="width: 40%" style="display: flex; align-items: center;">
                             <label class="switch">
@@ -132,7 +132,7 @@
                         </div>
 
                         <div class="row form-group mb-1 space_between">
-                            <label class="col-md-3">Cost of H2 Production (USD/kg)</label>
+                            <label class="col-md-3">Cost of H<sub>2</sub> Production (USD/kg)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K8">
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of H2 Production (USD/MMBTU)</label>
+                            <label class="col-md-3">Cost of H<sub>2</sub> Production (USD/MMBTU)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K9">
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of H2 Production (USD/MWh)</label>
+                            <label class="col-md-3">Cost of H<sub>2</sub> Production (USD/MWh)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K10">
@@ -172,6 +172,46 @@
                      style="margin-bottom: 2rem; display: flex; justify-content: center; align-items: center; width: 100%;">
                     <div class="col-md-8" id="canvas_wr">
                         <canvas id="chart_container" height="200px"></canvas>
+                    </div>
+                </div>
+
+                <div class="container_acc">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-11 col-sm-12 col-xs-12">
+                            <div class="accordion" id="accordionPlusMinus">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne"
+                                                aria-expanded="true"
+                                                aria-controls="collapseOne"
+                                        >
+                                            Notes
+                                        </button>
+                                    </h2>
+                                    <div
+                                            id="collapseOne"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne"
+                                            data-bs-parent="#accordionPlusMinus"
+                                    >
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>The heat and material balance and other operating parameters are based on <a href="https://ieaghg.org/publications/technical-reports/reports-list/9-technical-reports/1071-2022-07-low-carbon-hydrogen-from-natural-gas-global-roadmap">IEAGHG Technical Report 2022-07: Low-Carbon Hydrogen from Natural Gas: Global Roadmap</a></li>
+                                                <li>The calculations are based on a 79,000 ton per year (300MW) carbon capture-enabled hydrogen production facility in the Netherlands assuming a 90% load factor.</li>
+                                                <li>Financial modeling is done using 2020 as the base year, 3-year construction period, 8% real weighted cost of capital (WACC), 25-year project lifetime, a 1.15 EUR/USD exchange rate and no debt financing.</li>
+                                                <li>Calculated hydrogen production costs are calculated at the plant gate (200barg) and exclude storage, distribution, or transportation.</li>
+                                                <li>Total Installed Costs used in this analysis are $651/kW for unabated SMR, $1178/kW for SMR+90% carbon capture and $1104/kW for the ATR+GHR hydrogen plant.</li>
+                                                <li>Annual Fixed Operating Costs used in this analysis are $26/kW for unabated SMR, $41/kW for SMR+90% carbon capture and $47/kW for the ATR+GHR hydrogen plant. The fixed operating costs include costs for catalysts and chemicals that are normally part of the variable operating costs for a hydrogen plant.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -437,11 +477,11 @@
         <form action="" id="Dashboard2">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center mb-3" id="ammoniaCalc">Blue Ammonia Financial Model</h1>
+                    <h1 class="text-center mb-3" id="ammoniaCalc">Low Carbon/Blue Ammonia Financial Model</h1>
                 </div>
             </div>
             <div class="col-md-8 description">
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</span>
+                <span>Low carbon ammonia is produced through the haber-bosch process by reacting low carbon hydrogen with nitrogen derived from air separation. The model includes two low -carbon hydrogen technologies for comparison: conventional steam methane reforming as a reference, and *insert low-carbon H<sub>2</sub> technology* for comparison. The nitrogen plant in both cases have the same parameters.</span>
             </div>
             <div class="row mt-3 box_shadow" style="display: flex; justify-content: center;">
                 <div class="col-md-4 p-4 input_wr">
@@ -499,7 +539,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="row form-group mb-1">
+                    <div class="row form-group mb-1" style="display: none">
                         <label class="col-md-8" style="width: 60%">Electricity Export</label>
                         <div class="col-md-4" style="width: 40%">
                             <label class="switch">
@@ -524,12 +564,12 @@
                                 <h5 class="output_header light_blue navy_col text-center p-1 rounded"
                                     style="width:49.1%; text-align: center;">Reference Case</h5>
                                 <h5 class="output_header light_blue navy_col text-center p-1 rounded"
-                                    style="width:49.1%; text-align: center;">Ammonia w/Carbon Capture</h5>
+                                    style="width:49.1%; text-align: center;">Ammonia with Carbon Capture</h5>
                             </div>
                         </div>
 
                         <div class="row form-group mb-1 space_between">
-                            <label class="col-md-3">Cost of NH3 Production (USD/kg)</label>
+                            <label class="col-md-3">Cost of NH<sub>3</sub> Production (USD/ton)</label>
                             <div class="col-md-8 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K8">
@@ -538,7 +578,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1 space_between">
-                            <label class="col-md-3">Cost of NH3 Production (USD/MMBTU)</label>
+                            <label class="col-md-3">Cost of NH<sub>3</sub> Production (USD/MMBTU)</label>
                             <div class="col-md-8 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K9">
@@ -547,7 +587,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1 space_between">
-                            <label class="col-md-3">Cost of NH3 Production (USD/MWh)</label>
+                            <label class="col-md-3">Cost of NH<sub>3</sub> Production (USD/MWh)</label>
                             <div class="col-md-8 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K10">
@@ -556,7 +596,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1 space_between" style="display: none">
-                            <label class="col-md-3">CAPEX (USD/TPA NH3)</label>
+                            <label class="col-md-3">CAPEX (USD/TPA NH<sub>3</sub>)</label>
                             <div class="col-md-8 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K11">
@@ -565,7 +605,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1 space_between" style="display: none">
-                            <label class="col-md-3">NH3 Conversion Efficiency (LHV)</label>
+                            <label class="col-md-3">NH<sub>3</sub> Conversion Efficiency (LHV)</label>
                             <div class="col-md-8 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K12">
@@ -590,6 +630,47 @@
                      style="margin-bottom: 2rem; display: flex; justify-content: center; align-items: center; width: 100%;">
                     <div class="col-md-8" id="canvas_wr2">
                         <canvas id="chart_container2" height="200px"></canvas>
+                    </div>
+                </div>
+
+                <div class="container_acc">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-11 col-sm-12 col-xs-12">
+                            <div class="accordion" id="accordionPlusMinus2">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne2">
+                                        <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne2"
+                                                aria-expanded="true"
+                                                aria-controls="collapseOne2"
+                                        >
+                                            Notes
+                                        </button>
+                                    </h2>
+                                    <div
+                                            id="collapseOne2"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne2"
+                                            data-bs-parent="#accordionPlusMinus2"
+                                    >
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>The heat and material balance and other operating parameters are sourced from the <a href="https://sintef.brage.unit.no/sintef-xmlui/bitstream/handle/11250/3010564/Arnaiz_Cloete_2022.pdf?sequence=1">‘Techno-economic assessment of blue and green ammonia as energy carriers in a low-carbon future’</a>.</li>
+                                                <li>The calculations are based on a 1.1 million ton per year ammonia production facility operating at a 90% load factor with a 65.4% LHV efficiency or 28.5GJ/ton NH<sub>3</sub> specific energy consumption.</li>
+                                                <li>Financial modeling is done using 2020 as the base year, 4-year construction period, 8% real weighted cost of capital (WACC), 25-year project lifetime with no debt financing.</li>
+                                                <li>Total Installed Costs used in this analysis are $752/ton NH<sub>3</sub>/year for the base case and $793/ton NH<sub>3</sub>/year for the ammonia plant with carbon capture.</li>
+                                                <li>Fixed operating costs are 2.5% (of total installed cost) for maintenance, 1% for insurance and 60 personnel at $60,000 per year salary.</li>
+                                                <li>Catalyst and chemicals cost include $15/kg for reformer catalyst, $16,100/m<sup>3</sup> for Water Gas Shift reactor catalyst, and $20/kg ammonia catalyst.</li>
+                                                <li>Tax credit</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -756,11 +837,11 @@
         <form action="" id="Dashboard3">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center mb-3" id="greenCalc">Green Hydrogen Financial Model</h1>
+                    <h1 class="text-center mb-3" id="greenCalc">Electrolytic/Green Hydrogen Financial Model</h1>
                 </div>
             </div>
             <div class="col-md-8 description">
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</span>
+                <span>Electrolytic hydrogen is produced through electrolysis, a process where electricity is used to split water into hydrogen and oxygen. Electrolytic ammonia  is produced through the haber-bosch process by reacting electrolytic hydrogen with nitrogen derived from air separation. The hydrogen and ammonia model includes three different electrolyzer technologies for comparison: proton exchange membranes (PEM), alkaline electrolysis (AEL), and solid oxide electrolyzer cells (SOEC).</span>
             </div>
             <div class="row mt-3 box_shadow" style="display: flex; justify-content: center;">
                 <div class="col-md-4 p-4 input_wr">
@@ -848,7 +929,7 @@
                         </div>
 
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of H2 Production (USD/kg)</label>
+                            <label class="col-md-3">Cost of H<sub>2</sub> Production (USD/kg)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K9">
@@ -859,7 +940,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of H2 Production (USD/MMBTU)</label>
+                            <label class="col-md-3">Cost of H<sub>2</sub> Production (USD/MMBTU)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K10">
@@ -870,7 +951,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of H2 Production (USD/MWh)</label>
+                            <label class="col-md-3">Cost of H<sub>2</sub> Production (USD/MWh)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="K11">
@@ -964,7 +1045,7 @@
                         </div>
 
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of NH3 Production (USD/ton)</label>
+                            <label class="col-md-3">Cost of NH<sub>3</sub> Production (USD/ton)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="P9">
@@ -975,7 +1056,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of NH3 Production (USD/MMBTU)</label>
+                            <label class="col-md-3">Cost of NH<sub>3</sub> Production (USD/MMBTU)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="P10">
@@ -986,7 +1067,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1">
-                            <label class="col-md-3">Cost of NH3 Production (USD/MWh)</label>
+                            <label class="col-md-3">Cost of NH<sub>3</sub> Production (USD/MWh)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="P11">
@@ -1019,7 +1100,7 @@
                             </div>
                         </div>
                         <div class="row form-group mb-1" style="display: none">
-                            <label class="col-md-3">Energy Intensity (GJ/ton NH3)</label>
+                            <label class="col-md-3">Energy Intensity (GJ/ton NH<sub>3</sub>)</label>
                             <div class="col-md-9 data-row">
                                 <input type="text" class="form-control form-control-sm text-center" disabled
                                        data-cell="P14">
