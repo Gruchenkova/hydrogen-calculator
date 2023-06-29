@@ -10,7 +10,6 @@
     <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-
     <title>Hydrogen Calculator</title>
     <link href="https://fonts.cdnfonts.com/css/arial" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
@@ -46,7 +45,11 @@
                 <div class="col-md-4 p-4 input_wr">
                     <h5 class="output_header blue text-white text-center p-1 rounded">Input</h5>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Natural Gas Price (USD/MMBTU)</label>
+                        <label class="col-md-8 label" style="width: 60%">Natural Gas Price (USD/MMBTU)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Natural Gas prices can vary between major trading hubs where prices have typically hovered between $2-$4/MMBTU at Henry Hub prices and $10-$15 for the Dutch TTF index. The Japan Korea Marker (JKM) is another pricing index that reflects LNG demand in East Asia. During certain periods such as Autumn 2022, natural gas prices diverted significantly from historic trends."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="100" step="0.01" id="gasVis">
@@ -56,7 +59,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)</label>
+                        <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Electricity prices reflect the cost of delivered electricity to the plant. US industrial electricity prices for 2022 averaged $84.5/MWh. Data for other countries can be obtained from sources such as the IEA Real-Time Electricity Tracker."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="200" step="0.01" id="electricityVis">
@@ -64,11 +71,14 @@
                                        id="electricity"
                                        data-cell="G12">
                             </div>
-
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Carbon T&S (USD/ton)</label>
+                        <label class="col-md-8" style="width: 60%">Carbon T&S (USD/ton)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Carbon Transportation & Storage costs refers to the levelized cost of transporting and permanently sequestering carbon dioxide from the hydrogen production operations. This cost excludes the costs of capturing and compressing the CO2 to the pipeline inlet but includes the installed cost of the CO2 pipeline, surface facilities and the operations of the pipeline and injection sites. The cost of transportation largely is dependent on the distance between the hydrogen production facility and the storage site. The storage costs are largely dependent on the geological nature of the storage site that can influence drilling costs, injection, and monitoring operations. Since Carbon Transportation & Storage cost is a levelized cost calculation, it is strongly influenced by the quantity of CO2 transported and stored over the lifetime of a project. Costs can range anywhere from $20 to $250 per ton – more information can be found in Figure 49 of the IEAGHG report."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="500" step="0.01" id="carbonVis">
@@ -79,7 +89,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Carbon Price (USD/ton)</label>
+                        <label class="col-md-8" style="width: 60%">Carbon Price (USD/ton)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="The carbon price refers to the cost incurred by hydrogen producers for each ton of CO2 emitted. The European Union boasts one of the most mature carbon markets where CO2 prices hovered near the $100 per ton mark in 2022. Users can examine the impact of carbon pricing on the competitiveness of unabated hydrogen production compared to carbon-capture enabled hydrogen production."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="1000" step="0.01" id="carbonPriceVis">
@@ -91,7 +105,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">45Q Tax Credit</label>
+                        <label class="col-md-8" style="width: 60%">45Q Tax Credit
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="The 45Q tax credit is a US Federal tax incentive designed to encourage the capture and storage of CO2 from industrial facilities or directly from the atmosphere. The assumed credit used in this financial model is the top tier one available under the 45Q which is $85/ton for permanently sequestered carbon dioxide. Please note that when the 45Q toggle is switched on, the carbon price is no longer incorporated into the hydrogen production cost calculation."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%" style="display: flex; align-items: center;">
                             <label class="switch">
                                 <input type="checkbox" id="taxCredit" data-cell="G15"
@@ -123,11 +141,23 @@
                             <div class="col-md-9"
                                  style="display: flex; flex-direction: row; justify-content: space-between;">
                                 <h5 class="output_header blue w33 text-white text-center p-1 rounded"
-                                >Reference Case</h5>
+                                >Reference Case
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="This case refers to the unabated production of hydrogen from steam methane reforming which accounts for almost half of current hydrogen production."
+                                              data-bs-placement="top" width="10px" height="10px" src="./info.png"></sup>
+                                </h5>
                                 <h5 class="output_header blue w33 text-white text-center p-1 rounded"
-                                >SMR +90% CCS</h5>
+                                >SMR +90% CCS
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="This is the base case with the addition of post-combustion carbon capture to reduce overall carbon emissions by 90%."
+                                              data-bs-placement="top" width="10px" height="10px" src="./info.png"></sup>
+                                </h5>
                                 <h5 class="output_header blue w33 text-white text-center p-1 rounded"
-                                >ATR + GHR</h5>
+                                >ATR + GHR
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="Autothermal Reforming is a variation on traditional steam methane reforming that operates at higher temperatures and uses oxygen to generate heat internally as opposed to the SMR’s externally fired furnace configuration. The Gas Heat Reactor (GHR) is a further improvement to the ATR whereby the heat from the syngas is used to ‘pre-reform’ the feed stream, improving yield and facilitating the capture of most of the CO2 from the process. For a more detailed overview, please review CATF’s report on the topic."
+                                              data-bs-placement="top" width="10px" height="10px" src="./info.png"></sup>
+                                </h5>
                             </div>
                         </div>
 
@@ -200,12 +230,33 @@
                                     >
                                         <div class="accordion-body">
                                             <ol>
-                                                <li>The heat and material balance and other operating parameters are based on <a href="https://ieaghg.org/publications/technical-reports/reports-list/9-technical-reports/1071-2022-07-low-carbon-hydrogen-from-natural-gas-global-roadmap">IEAGHG Technical Report 2022-07: Low-Carbon Hydrogen from Natural Gas: Global Roadmap</a></li>
-                                                <li>The calculations are based on a 79,000 ton per year (300MW) carbon capture-enabled hydrogen production facility in the Netherlands assuming a 90% load factor.</li>
-                                                <li>Financial modeling is done using 2020 as the base year, 3-year construction period, 8% real weighted cost of capital (WACC), 25-year project lifetime, a 1.15 EUR/USD exchange rate and no debt financing.</li>
-                                                <li>Calculated hydrogen production costs are calculated at the plant gate (200barg) and exclude storage, distribution, or transportation.</li>
-                                                <li>Total Installed Costs used in this analysis are $651/kW for unabated SMR, $1178/kW for SMR+90% carbon capture and $1104/kW for the ATR+GHR hydrogen plant.</li>
-                                                <li>Annual Fixed Operating Costs used in this analysis are $26/kW for unabated SMR, $41/kW for SMR+90% carbon capture and $47/kW for the ATR+GHR hydrogen plant. The fixed operating costs include costs for catalysts and chemicals that are normally part of the variable operating costs for a hydrogen plant.</li>
+                                                <li>The heat and material balance and other operating parameters are
+                                                    based on <a
+                                                            href="https://ieaghg.org/publications/technical-reports/reports-list/9-technical-reports/1071-2022-07-low-carbon-hydrogen-from-natural-gas-global-roadmap">IEAGHG
+                                                        Technical Report 2022-07: Low-Carbon Hydrogen from Natural Gas:
+                                                        Global Roadmap</a></li>
+                                                <li>The calculations are based on a 79,000 ton per year (300MW) carbon
+                                                    capture-enabled hydrogen production facility in the Netherlands
+                                                    assuming a 90% load factor.
+                                                </li>
+                                                <li>Financial modeling is done using 2020 as the base year, 3-year
+                                                    construction period, 8% real weighted cost of capital (WACC),
+                                                    25-year project lifetime, a 1.15 EUR/USD exchange rate and no debt
+                                                    financing.
+                                                </li>
+                                                <li>Calculated hydrogen production costs are calculated at the plant
+                                                    gate (200barg) and exclude storage, distribution, or transportation.
+                                                </li>
+                                                <li>Total Installed Costs used in this analysis are $651/kW for unabated
+                                                    SMR, $1178/kW for SMR+90% carbon capture and $1104/kW for the
+                                                    ATR+GHR hydrogen plant.
+                                                </li>
+                                                <li>Annual Fixed Operating Costs used in this analysis are $26/kW for
+                                                    unabated SMR, $41/kW for SMR+90% carbon capture and $47/kW for the
+                                                    ATR+GHR hydrogen plant. The fixed operating costs include costs for
+                                                    catalysts and chemicals that are normally part of the variable
+                                                    operating costs for a hydrogen plant.
+                                                </li>
                                             </ol>
                                         </div>
                                     </div>
@@ -487,7 +538,11 @@
                 <div class="col-md-4 p-4 input_wr">
                     <h5 class="output_header light_blue navy_col text-center p-1 rounded">Input</h5>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Natural Gas Price (USD/MMBTU)</label>
+                        <label class="col-md-8" style="width: 60%">Natural Gas Price (USD/MMBTU)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Natural Gas prices can vary between major trading hubs where prices have typically hovered between $2-$4/MMBTU at Henry Hub prices and $10-$15 for the Dutch TTF index. The Japan Korea Marker (JKM) is another pricing index that reflects LNG demand in East Asia. During certain periods such as Autumn 2022, natural gas prices diverted significantly from historic trends."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="100" step="0.01" id="gasAmVis">
@@ -497,7 +552,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)</label>
+                        <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Electricity prices reflect the cost of delivered electricity to the plant. US industrial electricity prices for 2022 averaged $84.5/MWh. Data for other countries can be obtained from sources such as the IEA Real-Time Electricity Tracker."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="200" step="0.01" id="electricityAmVis">
@@ -508,7 +567,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Carbon T&S (USD/ton)</label>
+                        <label class="col-md-8" style="width: 60%">Carbon T&S (USD/ton)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Carbon Transportation & Storage costs refers to the levelized cost of transporting and permanently sequestering carbon dioxide from the hydrogen production operations. This cost excludes the costs of capturing and compressing the CO2 to the pipeline inlet but includes the installed cost of the CO2 pipeline, surface facilities and the operations of the pipeline and injection sites. The cost of transportation largely is dependent on the distance between the hydrogen production facility and the storage site. The storage costs are largely dependent on the geological nature of the storage site that can influence drilling costs, injection, and monitoring operations. Since Carbon Transportation & Storage cost is a levelized cost calculation, it is strongly influenced by the quantity of CO2 transported and stored over the lifetime of a project. Costs can range anywhere from $20 to $250 per ton – more information can be found in Figure 49 of the IEAGHG report."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="500" step="0.01" id="carbonAmVis">
@@ -518,7 +581,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Carbon Price (USD/ton)</label>
+                        <label class="col-md-8" style="width: 60%">Carbon Price (USD/ton)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="The carbon price refers to the cost incurred by hydrogen producers for each ton of CO2 emitted. The European Union boasts one of the most mature carbon markets where CO2 prices hovered near the $100 per ton mark in 2022. Users can examine the impact of carbon pricing on the competitiveness of unabated hydrogen production compared to carbon-capture enabled hydrogen production."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="1000" step="0.01" id="carbonPriceAmVis">
@@ -529,7 +596,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">45Q Tax Credit</label>
+                        <label class="col-md-8" style="width: 60%">45Q Tax Credit
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="The 45Q tax credit is a US Federal tax incentive designed to encourage the capture and storage of CO2 from industrial facilities or directly from the atmosphere. The assumed credit used in this financial model is the top tier one available under the 45Q which is $85/ton for permanently sequestered carbon dioxide. Please note that when the 45Q toggle is switched on, the carbon price is no longer incorporated into the hydrogen production cost calculation."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <label class="switch">
                                 <input type="checkbox" id="taxCreditAm" data-cell="G12"
@@ -562,9 +633,17 @@
                             <div class="col-md-8"
                                  style="display: flex; flex-direction: row; justify-content: space-between;">
                                 <h5 class="output_header light_blue navy_col text-center p-1 rounded"
-                                    style="width:49.1%; text-align: center;">Reference Case</h5>
+                                    style="width:49.1%; text-align: center;">Reference Case
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="This case refers to the unabated production of ammonia from steam methane reforming which accounts for almost all current ammonia demand. Ammonia plants have a primary and secondary reformer and air is introduced into one of the reformers to supply the nitrogen for the ammonia plant."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                </h5>
                                 <h5 class="output_header light_blue navy_col text-center p-1 rounded"
-                                    style="width:49.1%; text-align: center;">Ammonia with Carbon Capture</h5>
+                                    style="width:49.1%; text-align: center;">Ammonia with Carbon Capture
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="This is the base case, but CO2 compression and drying facilities are added to the ammonia plant. Even in ‘regular’ ammonia plants, the process CO2 is removed from the reformer syngas before the syngas enters the ammonia synthesis loop but is not treated and compressed for transportation and storage. Instead, most of the captured CO2 is used in urea synthesis. The remaining CO2 is released into the atmosphere. This facility achieves approximately an 80% carbon capture rate. The other source of CO2 that is not captured is the flue gas CO2 from the fired heaters. The addition of post-combustion carbon capture can increase capture rates to 90%."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                </h5>
                             </div>
                         </div>
 
@@ -658,12 +737,32 @@
                                     >
                                         <div class="accordion-body">
                                             <ol>
-                                                <li>The heat and material balance and other operating parameters are sourced from the <a href="https://sintef.brage.unit.no/sintef-xmlui/bitstream/handle/11250/3010564/Arnaiz_Cloete_2022.pdf?sequence=1">‘Techno-economic assessment of blue and green ammonia as energy carriers in a low-carbon future’</a>.</li>
-                                                <li>The calculations are based on a 1.1 million ton per year ammonia production facility operating at a 90% load factor with a 65.4% LHV efficiency or 28.5GJ/ton NH<sub>3</sub> specific energy consumption.</li>
-                                                <li>Financial modeling is done using 2020 as the base year, 4-year construction period, 8% real weighted cost of capital (WACC), 25-year project lifetime with no debt financing.</li>
-                                                <li>Total Installed Costs used in this analysis are $752/ton NH<sub>3</sub>/year for the base case and $793/ton NH<sub>3</sub>/year for the ammonia plant with carbon capture.</li>
-                                                <li>Fixed operating costs are 2.5% (of total installed cost) for maintenance, 1% for insurance and 60 personnel at $60,000 per year salary.</li>
-                                                <li>Catalyst and chemicals cost include $15/kg for reformer catalyst, $16,100/m<sup>3</sup> for Water Gas Shift reactor catalyst, and $20/kg ammonia catalyst.</li>
+                                                <li>The heat and material balance and other operating parameters are
+                                                    sourced from the <a
+                                                            href="https://sintef.brage.unit.no/sintef-xmlui/bitstream/handle/11250/3010564/Arnaiz_Cloete_2022.pdf?sequence=1">‘Techno-economic
+                                                        assessment of blue and green ammonia as energy carriers in a
+                                                        low-carbon future’</a>.
+                                                </li>
+                                                <li>The calculations are based on a 1.1 million ton per year ammonia
+                                                    production facility operating at a 90% load factor with a 65.4% LHV
+                                                    efficiency or 28.5GJ/ton NH<sub>3</sub> specific energy consumption.
+                                                </li>
+                                                <li>Financial modeling is done using 2020 as the base year, 4-year
+                                                    construction period, 8% real weighted cost of capital (WACC),
+                                                    25-year project lifetime with no debt financing.
+                                                </li>
+                                                <li>Total Installed Costs used in this analysis are $752/ton
+                                                    NH<sub>3</sub>/year for the base case and $793/ton NH<sub>3</sub>/year
+                                                    for the ammonia plant with carbon capture.
+                                                </li>
+                                                <li>Fixed operating costs are 2.5% (of total installed cost) for
+                                                    maintenance, 1% for insurance and 60 personnel at $60,000 per year
+                                                    salary.
+                                                </li>
+                                                <li>Catalyst and chemicals cost include $15/kg for reformer catalyst,
+                                                    $16,100/m<sup>3</sup> for Water Gas Shift reactor catalyst, and
+                                                    $20/kg ammonia catalyst.
+                                                </li>
                                                 <li>Tax credit</li>
                                             </ol>
                                         </div>
@@ -847,7 +946,11 @@
                 <div class="col-md-4 p-4 input_wr">
                     <h5 class="output_header green navy_col text-center p-1 rounded">Electrolyzer Input</h5>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Capacity Factor</label>
+                        <label class="col-md-8" style="width: 60%">Capacity Factor
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Capacity factor is a measure of actual electricity generation over a period of time compared to the maximum potential output. The US Energy Information Administration publishes capacity factors for various electricity generation systems."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" step="0.01" min="0" max="1" id="capFacGrVis">
@@ -857,7 +960,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)</label>
+                        <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Electrolytic hydrogen production facilities can source their electricity from different sources of low-carbon electricity including solar, wind, hydropower, nuclear, geothermal or a combination of these sources if procuring electricity from a low-carbon grid. Power Purchase Agreements (PPA) prices for renewables such as wind and solar best reflect the input costs for hydrogen electrolytic facilities but can exclude additional costs such as network access fees and transmission costs. If PPA prices are not available, the levelized cost of electricity can be a reliable proxy for delivered electricity prices for different electricity generation technologies."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
                                 <input type="range" min="0" max="200" step="0.01" id="electricityGrVis">
@@ -868,7 +975,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">CAPEX Assumptions</label>
+                        <label class="col-md-8" style="width: 60%">CAPEX Assumptions
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="Total installed cost for a 1GW electrolysis facility expressed in USD/kW is obtained from the Institute of Sustainable Process Technologies. The ‘High’ option refers to the estimates from 2020 report and ‘Low’ option refers to 2030 estimates from the 2022 report for PEM and AEL electrolyzers. Similarly, capital costs for Solid Oxide electrolysis were obtained from a 2023 ISPT report."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <select style="display: none" class="form-control form-control-sm greenHydrogenInput"
                                     id="capexGr" data-cell="G11">
@@ -883,7 +994,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">Electrolyzer Efficiency</label>
+                        <label class="col-md-8" style="width: 60%">Electrolyzer Efficiency
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="The ‘Low’ option reflects current electrolysis efficiencies, and the ‘High’ option refers to 2030 improved efficiency estimates obtained from the CATF Fraunhofer study. Solid Oxide electrolysis system efficiency (with heat integration) is assumed to remain constant at 40kWh/kg H2."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%">
                             <select class="form-control form-control-sm greenHydrogenInput" style="display: none"
                                     id="electrolyzerEfGr" data-cell="G12">
@@ -898,7 +1013,11 @@
                         </div>
                     </div>
                     <div class="row form-group mb-1">
-                        <label class="col-md-8" style="width: 60%">PTC Tax Credit</label>
+                        <label class="col-md-8" style="width: 60%">PTC Tax Credit
+                            <sup><img class="info" data-bs-toggle="tooltip"
+                                      title="The Inflation Reduction Act (IRA) introduced the 45V Hydrogen Production Tax Credit that provides clean hydrogen developers with tax credits of varying amounts depending on the lifecycle greenhouse gas emissions associated with hydrogen production. A developer is entitled up to $3/kg H2 for hydrogen produced with a GHG intensity of less than 0.45kg CO2/kg H2. The financial model applies a $3/kg H2 tax credit."
+                                      data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                        </label>
                         <div class="col-md-4" style="width: 40%" style="display: flex; align-items: center;">
                             <label class="switch">
                                 <input type="checkbox" id="ptcTaxCredit" data-cell="G13"
@@ -920,11 +1039,23 @@
                             <div class="col-md-9"
                                  style="display: flex; flex-direction: row; justify-content: space-between;">
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
-                                    style="width:32.5%; text-align: center;">PEM</h5>
+                                    style="width:32.5%; text-align: center;">PEM
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="Proton Exchange Membrane Electrolyzer – See CATF Fraunhofer study for a detailed overview of this technology."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
-                                    style="width:32.5%; text-align: center;">AEL</h5>
+                                    style="width:32.5%; text-align: center;">AEL
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="Alkaline Electrolyzer – See CATF Fraunhofer study for a detailed overview of this technology."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
-                                    style="width:32.5%; text-align: center;">SOEC</h5>
+                                    style="width:32.5%; text-align: center;">SOEC
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="Solid Oxide Electrolyzer – See CATF study for a detailed overview of this technology."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                </h5>
                             </div>
                         </div>
 
@@ -1036,11 +1167,23 @@
                             <div class="col-md-9"
                                  style="display: flex; flex-direction: row; justify-content: space-between;">
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
-                                    style="width:32.5%; text-align: center;">PEM</h5>
+                                    style="width:32.5%; text-align: center;">PEM
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="Proton Exchange Membrane Electrolyzer – See CATF Fraunhofer study for a detailed overview of this technology."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
-                                    style="width:32.5%; text-align: center;">AEL</h5>
+                                    style="width:32.5%; text-align: center;">AEL
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="Alkaline Electrolyzer – See CATF Fraunhofer study for a detailed overview of this technology."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup
+                                </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
-                                    style="width:32.5%; text-align: center;">SOEC</h5>
+                                    style="width:32.5%; text-align: center;">SOEC
+                                    <sup><img class="info" data-bs-toggle="tooltip"
+                                              title="Solid Oxide Electrolyzer – See CATF study for a detailed overview of this technology."
+                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                </h5>
                             </div>
                         </div>
 
@@ -1474,7 +1617,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-
 <script src="libs/jquery/jquery.min.js"></script>
 <script src="libs/ssf/ssf.js"></script>
 <script src="libs/moment/moment.js"></script>
