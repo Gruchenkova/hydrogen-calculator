@@ -45,7 +45,7 @@ div {
 }
 
 .description {
-    text-align: center;
+    /*text-align: center;*/
     margin-bottom: 30px;
     margin-top: 25px;
 }
@@ -104,6 +104,10 @@ form {
 
 .green {
     background-color: #03CDA7;
+}
+
+.gray {
+    background-color: #CDD4E0;
 }
 
 .-btn:hover {
@@ -351,7 +355,7 @@ input[type="text"]:disabled {
 
 @media (min-width: 700px) {
     #menu {
-        width: 70%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         justify-content: space-around
@@ -451,8 +455,13 @@ input[type="text"]:disabled {
     font-size: 12px;
     background-color: #EEF1F6;
     opacity: 1 !important;
+    text-align: left!important;
 }
 
 .tooltip-arrow {
     display: none!important;
+}
+
+li {
+    margin-bottom: 0.8rem;
 }
