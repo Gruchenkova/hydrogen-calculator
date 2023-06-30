@@ -1736,4 +1736,6 @@ greenHydrogenInputEl.forEach((el) => {
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const myDefaultAllowList = bootstrap.Tooltip.Default.allowList;
+myDefaultAllowList.img = ['data-bs-trigger', 'data-bs-html'];
 
