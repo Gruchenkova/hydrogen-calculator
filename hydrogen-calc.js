@@ -39,6 +39,10 @@ function onGreen() {
   document.querySelector("#greenCalc").scrollIntoView(true);
 }
 
+function onGreenAm() {
+  document.querySelector("#greenAmCalc").scrollIntoView(true);
+}
+
 HydrogenCalc.fn = HydrogenCalc.prototype;
 AmmoniaCalc.fn = AmmoniaCalc.prototype;
 GreenHydrogenCalc.fn = GreenHydrogenCalc.prototype;
@@ -403,25 +407,25 @@ blueHydrogenInputEl.forEach((el) => {
     const eTargetId = e.target.id;
     let eTargetVal = e.target.value.replace("$", "").replace(" ", "").replace(",", "") * 1;
     if (eTargetId == "gas") {
-      if (eTargetVal > 100){
+      if (eTargetVal > 100) {
         eTargetVal = 100;
       }
       getElById("gasVis").value = eTargetVal;
       changeGasVis();
     } else if (eTargetId == "electricity") {
-      if (eTargetVal > 200){
+      if (eTargetVal > 200) {
         eTargetVal = 200;
       }
       getElById("electricityVis").value = eTargetVal;
       changeElectricityVis();
     } else if (eTargetId == "carbon") {
-      if (eTargetVal > 500){
+      if (eTargetVal > 500) {
         eTargetVal = 500;
       }
       getElById("carbonVis").value = eTargetVal;
       changeCarbonVis();
     } else if (eTargetId == "carbonPrice") {
-      if (eTargetVal > 1000){
+      if (eTargetVal > 1000) {
         eTargetVal = 1000;
       }
       getElById("carbonPriceVis").value = eTargetVal;
@@ -445,17 +449,17 @@ function calculateHydrogenCalc() {
   buildNewCanvasHydrogenCalc();
 }
 
-function changeGasVis(){
+function changeGasVis() {
   self.sheets["Dashboard"].getCell("G11").setValue(getElById("gasVis").value * 1);
   getElById("gas").blur();
   calculateHydrogenCalc();
 }
 
 getElById("gasVis").addEventListener("input", function() {
-  changeGasVis()
+  changeGasVis();
 });
 
-function changeElectricityVis(){
+function changeElectricityVis() {
   self.sheets["Dashboard"].getCell("G12").setValue(getElById("electricityVis").value * 1);
   getElById("electricity").blur();
   calculateHydrogenCalc();
@@ -465,7 +469,7 @@ getElById("electricityVis").addEventListener("input", function() {
   changeElectricityVis();
 });
 
-function changeCarbonVis(){
+function changeCarbonVis() {
   self.sheets["Dashboard"].getCell("G13").setValue(getElById("carbonVis").value * 1);
   getElById("carbon").blur();
   calculateHydrogenCalc();
@@ -475,7 +479,7 @@ getElById("carbonVis").addEventListener("input", function() {
   changeCarbonVis();
 });
 
-function changeCarbonPriceVis(){
+function changeCarbonPriceVis() {
   self.sheets["Dashboard"].getCell("G14").setValue(getElById("carbonPriceVis").value * 1);
   getElById("carbonPrice").blur();
   calculateHydrogenCalc();
@@ -1040,7 +1044,7 @@ function calculateAmmoniaCalc() {
   buildNewCanvasAmmoniaCalc();
 }
 
-function changeGasAmVis(){
+function changeGasAmVis() {
   self2.sheets["Dashboard2"].getCell("G8").setValue(getElById("gasAmVis").value * 1);
   getElById("gasAm").blur();
   calculateAmmoniaCalc();
@@ -1050,7 +1054,7 @@ getElById("gasAmVis").addEventListener("input", function() {
   changeGasAmVis();
 });
 
-function changeElectricityAmVis(){
+function changeElectricityAmVis() {
   self2.sheets["Dashboard2"].getCell("G9").setValue(getElById("electricityAmVis").value * 1);
   getElById("electricityAm").blur();
   calculateAmmoniaCalc();
@@ -1060,7 +1064,7 @@ getElById("electricityAmVis").addEventListener("input", function() {
   changeElectricityAmVis();
 });
 
-function changeCarbonAmVis(){
+function changeCarbonAmVis() {
   self2.sheets["Dashboard2"].getCell("G10").setValue(getElById("carbonAmVis").value * 1);
   getElById("carbonAm").blur();
   calculateAmmoniaCalc();
@@ -1070,7 +1074,7 @@ getElById("carbonAmVis").addEventListener("input", function() {
   changeCarbonAmVis();
 });
 
-function changeCarbonPriceAmVis(){
+function changeCarbonPriceAmVis() {
   self2.sheets["Dashboard2"].getCell("G11").setValue(getElById("carbonPriceAmVis").value * 1);
   getElById("carbonPriceAm").blur();
   calculateAmmoniaCalc();
@@ -1082,33 +1086,33 @@ getElById("carbonPriceAmVis").addEventListener("input", function() {
 
 let blueAmmoniaInputEl = document.querySelectorAll(".blueAmmoniaInput");
 blueAmmoniaInputEl.forEach((el) => {
-  el.addEventListener("change", function (e){
+  el.addEventListener("change", function(e) {
     const eTargetId = e.target.id;
     let eTargetVal = e.target.value.replace("$", "").replace(" ", "").replace(",", "") * 1;
     if (eTargetId == "gasAm") {
-      if (eTargetVal > 100){
+      if (eTargetVal > 100) {
         eTargetVal = 100;
       }
       getElById("gasAmVis").value = eTargetVal;
       changeGasAmVis();
     } else if (eTargetId == "electricityAm") {
-      if (eTargetVal > 200){
+      if (eTargetVal > 200) {
         eTargetVal = 200;
       }
       getElById("electricityAmVis").value = eTargetVal;
       changeElectricityAmVis();
     } else if (eTargetId == "carbonAm") {
-      if (eTargetVal > 500){
+      if (eTargetVal > 500) {
         eTargetVal = 500;
       }
       getElById("carbonAmVis").value = eTargetVal;
       changeCarbonAmVis();
     } else if (eTargetId == "carbonPriceAm") {
-      if (eTargetVal > 1000){
+      if (eTargetVal > 1000) {
         eTargetVal = 1000;
       }
       getElById("carbonPriceAmVis").value = eTargetVal;
-      changeCarbonPriceAmVis()
+      changeCarbonPriceAmVis();
     }
     buildNewCanvasAmmoniaCalc();
   });
@@ -1684,7 +1688,7 @@ capexGrVisEL.addEventListener("change", function() {
   calculateGreenCalc();
 });
 
-function changeElectricityCrVis(){
+function changeElectricityCrVis() {
   self3.sheets["Dashboard3"].getCell("G10").setValue(getElById("electricityGrVis").value * 1);
   $("#Dashboard3").calx("getSheet").getCell("G10").calculate();
   getElById("electricityGr").blur();
@@ -1695,7 +1699,7 @@ getElById("electricityGrVis").addEventListener("input", function() {
   changeElectricityCrVis();
 });
 
-function changeCapFacGrVis(){
+function changeCapFacGrVis() {
   self3.sheets["Dashboard3"].getCell("G9").setValue(getElById("capFacGrVis").value * 1);
   $("#Dashboard3").calx("getSheet").getCell("G9").calculate();
   getElById("capFacGr").blur();
@@ -1703,30 +1707,30 @@ function changeCapFacGrVis(){
 }
 
 getElById("capFacGrVis").addEventListener("input", function() {
-  changeCapFacGrVis()
+  changeCapFacGrVis();
 });
 
 let greenHydrogenInputEl = document.querySelectorAll(".greenHydrogenInput");
 greenHydrogenInputEl.forEach((el) => {
-  el.addEventListener("change", function(e){
+  el.addEventListener("change", function(e) {
     const eTargetId = e.target.id;
     let eTargetVal = e.target.value.replace("$", "").replace(" ", "").replace(",", "").replace("%", "") * 1;
     if (eTargetId == "electricityGr") {
-      if (eTargetVal > 200){
+      if (eTargetVal > 200) {
         eTargetVal = 200;
       }
       getElById("electricityGrVis").value = eTargetVal;
       changeElectricityCrVis();
-    } else if(eTargetId == "capFacGr"){
-      eTargetVal = eTargetVal / 100
-      if (eTargetVal > 1){
+    } else if (eTargetId == "capFacGr") {
+      eTargetVal = eTargetVal / 100;
+      if (eTargetVal > 1) {
         eTargetVal = 1;
       }
       getElById("capFacGrVis").value = eTargetVal;
       changeCapFacGrVis();
     }
     buildNewCanvasGreenCalc();
-  } );
+  });
   el.addEventListener("keypress", function(e) {
     if (e.which == 13) {
       el.blur();
@@ -1734,8 +1738,8 @@ greenHydrogenInputEl.forEach((el) => {
   });
 });
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll("[data-bs-toggle=\"tooltip\"]");
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 const myDefaultAllowList = bootstrap.Tooltip.Default.allowList;
 myDefaultAllowList.img = ['data-bs-trigger', 'data-bs-html'];
 
