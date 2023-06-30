@@ -26,6 +26,7 @@
             <div><a class="jump_link_btn light_blue navy_col -btn" id="btnAmmonia" onclick="onAmmonia()">Blue Ammonia
                 Model</a></div>
             <div><a class="jump_link_btn green -btn navy_col" onclick="onGreen()">Green Hydrogen Model</a></div>
+            <div><a class="jump_link_btn gray -btn navy_col" onclick="onGreenAm()">Electrolytic Ammonia Model</a></div>
         </nav>
     </div>
 </div>
@@ -39,7 +40,7 @@
                 </div>
             </div>
             <div class="col-md-8 description">
-                <span>Low carbon/Blue hydrogen is produced by reforming natural gas and capturing the CO2 using carbon capture and storage equipment. This model includes three different technologies for comparison: steam methane reforming (“SMR”) as a reference, SMR with 90% carbon capture and storage (“CCS”), and autothermal reforming (“ATR”) with gas heated reforming  (“GTR”) and CCS.</span>
+                <span>Low carbon ‘blue’ hydrogen is produced by reforming natural gas and capturing the CO<sub>2</sub> using carbon capture and storage (CCS) equipment. This model includes three different technologies for comparison: unabated steam methane reforming (SMR) as a reference, SMR with 90% CCS, and autothermal reforming (ATR) with gas heated reforming (GHR) and CCS. </span>
             </div>
             <div class="row mt-3 box_shadow" style="display: flex; justify-content: center;">
                 <div class="col-md-4 p-4 input_wr">
@@ -60,7 +61,8 @@
                     </div>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)
-                            <sup><img class="info i_link" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="Electricity prices reflect the cost of delivered electricity to the plant. US industrial electricity prices for <a href='https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=table_5_03'>2022 averaged $84.5/MWh</a>. Data for other countries can be obtained from sources such as the <a href='https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker?gclid=Cj0KCQjwy9-kBhCHARIsAHpBjHjqmtSq06Gl3aWA7y-FHZHJdzb1l1hJ5-XT2b9fngkws_Wj0goGwwEaArRWEALw_wcB&tracker=true&from=2023-5-27&to=2023-6-26&category=price&country=FRA'>IEA Real-Time Electricity Tracker</a>."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -75,7 +77,8 @@
                     </div>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">Carbon T&S (USD/ton)
-                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="Carbon Transportation & Storage costs refers to the levelized cost of transporting and permanently sequestering carbon dioxide from the hydrogen production operations. This cost excludes the costs of capturing and compressing the CO2 to the pipeline inlet but includes the installed cost of the CO2 pipeline, surface facilities and the operations of the pipeline and injection sites. The cost of transportation largely is dependent on the distance between the hydrogen production facility and the storage site. The storage costs are largely dependent on the geological nature of the storage site that can influence drilling costs, injection, and monitoring operations. Since Carbon Transportation & Storage cost is a levelized cost calculation, it is strongly influenced by the quantity of CO2 transported and stored over the lifetime of a project. Costs can range anywhere from $20 to $250 per ton – more information can be found in Figure 49 of the <a href='https://ieaghg.org/publications/technical-reports/reports-list/9-technical-reports/1071-2022-07-low-carbon-hydrogen-from-natural-gas-global-roadmap'>IEAGHG report</a>."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -154,7 +157,8 @@
                                 </h5>
                                 <h5 class="output_header blue w33 text-white text-center p-1 rounded"
                                 >ATR + GHR
-                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                              data-bs-trigger="hover click"
                                               title="Autothermal Reforming is a variation on traditional steam methane reforming that operates at higher temperatures and uses oxygen to generate heat internally as opposed to the SMR’s externally fired furnace configuration. The Gas Heat Reactor (GHR) is a further improvement to the ATR whereby the heat from the syngas is used to ‘pre-reform’ the feed stream, improving yield and facilitating the capture of most of the CO2 from the process. For a more detailed overview, please review <a href='https://cdn.catf.us/wp-content/uploads/2021/04/21092209/CATF_ZCFHensleyMemo_Proof_07.16.21-1.pdf'>CATF’s report</a> on the topic."
                                               data-bs-placement="top" width="10px" height="10px" src="./info.png"></sup>
                                 </h5>
@@ -532,7 +536,7 @@
                 </div>
             </div>
             <div class="col-md-8 description">
-                <span>Low carbon ammonia is produced through the haber-bosch process by reacting low carbon hydrogen with nitrogen derived from air separation. The model includes two low -carbon hydrogen technologies for comparison: conventional steam methane reforming as a reference, and *insert low-carbon H<sub>2</sub> technology* for comparison. The nitrogen plant in both cases have the same parameters.</span>
+                <span>Low carbon ammonia is produced through the Haber Bosch process. The model includes a reference case and low-carbon case that includes CO<sub>2</sub> compression and drying facilities upstream of transportation and storage facilities. </span>
             </div>
             <div class="row mt-3 box_shadow" style="display: flex; justify-content: center;">
                 <div class="col-md-4 p-4 input_wr">
@@ -553,7 +557,8 @@
                     </div>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)
-                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="Electricity prices reflect the cost of delivered electricity to the plant. US industrial electricity prices for <a href='https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=table_5_03'>2022 averaged $84.5/MWh</a>. Data for other countries can be obtained from sources such as the <a href='https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker?gclid=Cj0KCQjwy9-kBhCHARIsAHpBjHjqmtSq06Gl3aWA7y-FHZHJdzb1l1hJ5-XT2b9fngkws_Wj0goGwwEaArRWEALw_wcB&tracker=true&from=2023-5-27&to=2023-6-26&category=price&country=FRA'>IEA Real-Time Electricity Tracker</a>."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -568,7 +573,8 @@
                     </div>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">Carbon T&S (USD/ton)
-                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="Carbon Transportation & Storage costs refers to the levelized cost of transporting and permanently sequestering carbon dioxide from the hydrogen production operations. This cost excludes the costs of capturing and compressing the CO2 to the pipeline inlet but includes the installed cost of the CO2 pipeline, surface facilities and the operations of the pipeline and injection sites. The cost of transportation largely is dependent on the distance between the hydrogen production facility and the storage site. The storage costs are largely dependent on the geological nature of the storage site that can influence drilling costs, injection, and monitoring operations. Since Carbon Transportation & Storage cost is a levelized cost calculation, it is strongly influenced by the quantity of CO2 transported and stored over the lifetime of a project. Costs can range anywhere from $20 to $250 per ton – more information can be found in Figure 49 of the <a href='https://ieaghg.org/publications/technical-reports/reports-list/9-technical-reports/1071-2022-07-low-carbon-hydrogen-from-natural-gas-global-roadmap'>IEAGHG report</a>."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -636,13 +642,15 @@
                                     style="width:49.1%; text-align: center;">Reference Case
                                     <sup><img class="info" data-bs-toggle="tooltip"
                                               title="This case refers to the unabated production of ammonia from steam methane reforming which accounts for almost all current ammonia demand. Ammonia plants have a primary and secondary reformer and air is introduced into one of the reformers to supply the nitrogen for the ammonia plant."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                                 <h5 class="output_header light_blue navy_col text-center p-1 rounded"
                                     style="width:49.1%; text-align: center;">Ammonia with Carbon Capture
                                     <sup><img class="info" data-bs-toggle="tooltip"
                                               title="This is the base case, but CO2 compression and drying facilities are added to the ammonia plant. Even in ‘regular’ ammonia plants, the process CO2 is removed from the reformer syngas before the syngas enters the ammonia synthesis loop but is not treated and compressed for transportation and storage. Instead, most of the captured CO2 is used in urea synthesis. The remaining CO2 is released into the atmosphere. This facility achieves approximately an 80% carbon capture rate. The other source of CO2 that is not captured is the flue gas CO2 from the fired heaters. The addition of post-combustion carbon capture can increase capture rates to 90%."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                             </div>
                         </div>
@@ -939,15 +947,24 @@
                     <h1 class="text-center mb-3" id="greenCalc">Electrolytic/Green Hydrogen Financial Model</h1>
                 </div>
             </div>
-            <div class="col-md-8 description">
-                <span>Electrolytic hydrogen is produced through electrolysis, a process where electricity is used to split water into hydrogen and oxygen. Electrolytic ammonia  is produced through the haber-bosch process by reacting electrolytic hydrogen with nitrogen derived from air separation. The hydrogen and ammonia model includes three different electrolyzer technologies for comparison: proton exchange membranes (PEM), alkaline electrolysis (AEL), and solid oxide electrolyzer cells (SOEC).</span>
-            </div>
+<!--            <div class="col-md-8 description">-->
+<!--                <span>-->
+<!--                    Electrolytic hydrogen is produced through electrolysis, a process where electricity is used to split water into hydrogen and oxygen. For hydrogen to be climate beneficial, the electricity used must be low carbon. Low carbon electricity can come from a variety of sources including solar, wind, hydropower, nuclear, geothermal or a combination of these sources if procured from a low-carbon grid. Hydrogen production costs for three electrolysis technologies are examined:-->
+<!--                    <ol>-->
+<!--                        <li>Proton Exchange Membrane</li>-->
+<!--                        <li>Alkaline Membrane</li>-->
+<!--                        <li>Solid Oxide</li>-->
+<!--                    </ol>-->
+<!--                    CATF recently published a paper    on the limits of relying on falling electrolyzer costs to reduce the production cost of electrolytic hydrogen.-->
+<!--                </span>-->
+<!--            </div>-->
             <div class="row mt-3 box_shadow" style="display: flex; justify-content: center;">
                 <div class="col-md-4 p-4 input_wr">
                     <h5 class="output_header green navy_col text-center p-1 rounded">Electrolyzer Input</h5>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">Capacity Factor
-                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="Capacity factor is a measure of actual electricity generation over a period of time compared to the maximum potential output. The US Energy Information Administration publishes <a href='https://www.eia.gov/todayinenergy/detail.php?id=42995#:~:text=EIA%20calculates%20capacity%20factors%20by,operating%20all%20of%20the%20time.'>capacity factors</a> for various electricity generation systems."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -961,7 +978,8 @@
                     </div>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">Electricity Price (USD/MWh)
-                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="Electrolytic hydrogen production facilities can source their electricity from different sources of low-carbon electricity including solar, wind, hydropower, nuclear, geothermal or a combination of these sources if procuring electricity from a low-carbon grid. Power Purchase Agreements (PPA) prices for renewables such as wind and solar best reflect the input costs for hydrogen electrolytic facilities but can exclude additional costs such as network access fees and transmission costs. If PPA prices are not available, <a href='https://www.lazard.com/research-insights/levelized-cost-of-energyplus/'>the levelized cost of electricity</a> can be a reliable proxy for delivered electricity prices for different electricity generation technologies."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -976,7 +994,8 @@
                     </div>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">CAPEX Assumptions
-                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="Total installed cost for a 1GW electrolysis facility expressed in USD/kW is obtained from the Institute of Sustainable Process Technologies. The ‘High’ option refers to the estimates from <a href='https://ispt.eu/media/ISPT-public-report-gigawatt-green-hydrogen-plant.pdf'>2020 report</a> and ‘Low’ option refers to 2030 estimates from the <a href='https://ispt.eu/media/Public-report-gigawatt-advanced-green-electrolyser-design.pdf'>2022 report</a> for PEM and AEL electrolyzers. Similarly, capital costs for Solid Oxide electrolysis were obtained from a <a href='https://ispt.eu/publications/next-level-solid-oxide-electrolysis/'>2023 ISPT report</a>."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -995,7 +1014,8 @@
                     </div>
                     <div class="row form-group mb-1">
                         <label class="col-md-8" style="width: 60%">Electrolyzer Efficiency
-                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                            <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                      data-bs-trigger="hover click"
                                       title="The ‘Low’ option reflects current electrolysis efficiencies, and the ‘High’ option refers to 2030 improved efficiency estimates obtained from the <a href='https://www.ise.fraunhofer.de/content/dam/ise/de/documents/presseinformationen/2022/0322_ISE_e_PR_Study_CATF.pdf'>CATF Fraunhofer study</a>. Solid Oxide electrolysis system efficiency (with heat integration) is assumed to remain constant at 40kWh/kg H2."
                                       data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
                         </label>
@@ -1030,31 +1050,45 @@
                 </div>
             </div>
 
-            <div class="box_shadow row mt-5">
+            <div class="box_shadow row mt-5" style="display: flex; justify-content: center; align-items: center;">
                 <div class="row mt-4" style="display: flex; justify-content: center;">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem; margin-top: 1rem">Hydrogen Production</h3>
+                    <span style="margin-bottom: 25px">
+                    Electrolytic hydrogen is produced through electrolysis, a process where electricity is used to split water into hydrogen and oxygen. For hydrogen to be climate beneficial, the electricity used must be low carbon. Low carbon electricity can come from a variety of sources including solar, wind, hydropower, nuclear, geothermal or a combination of these sources if procured from a low-carbon grid. Hydrogen production costs for three electrolysis technologies are examined:
+                    <ol>
+                        <li style="margin-top: 0.8rem">Proton Exchange Membrane</li>
+                        <li>Alkaline Membrane</li>
+                        <li>Solid Oxide</li>
+                    </ol>
+                    CATF recently published a paper    on the limits of relying on falling electrolyzer costs to reduce the production cost of electrolytic hydrogen.
+                </span>
                     <div class="col-md-11 p-8">
-                        <h3 style="text-align: center; margin-bottom: 1.5rem; margin-top: 1rem">Hydrogen Production</h3>
                         <div class="row form-group mb-1">
                             <label class="col-md-3"></label>
                             <div class="col-md-9"
                                  style="display: flex; flex-direction: row; justify-content: space-between;">
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
                                     style="width:32.5%; text-align: center;">PEM
-                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                              data-bs-trigger="hover click"
                                               title="Proton Exchange Membrane Electrolyzer – See <a href='https://www.ise.fraunhofer.de/content/dam/ise/de/documents/presseinformationen/2022/0322_ISE_e_PR_Study_CATF.pdf'>CATF Fraunhofer study</a> for a detailed overview of this technology."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
                                     style="width:32.5%; text-align: center;">AEL
-                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                              data-bs-trigger="hover click"
                                               title="Alkaline Electrolyzer – See <a href='https://www.ise.fraunhofer.de/content/dam/ise/de/documents/presseinformationen/2022/0322_ISE_e_PR_Study_CATF.pdf'>CATF Fraunhofer study</a> for a detailed overview of this technology."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
                                     style="width:32.5%; text-align: center;">SOEC
                                     <sup><img class="info" data-bs-toggle="tooltip"
                                               title="Solid Oxide Electrolyzer – See CATF study for a detailed overview of this technology."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                             </div>
                         </div>
@@ -1149,7 +1183,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row mt-4"
                      style="margin-bottom: 2rem; display: flex; justify-content: center; align-items: center; width: 100%;">
                     <div class="col-md-8" id="canvas_wr3">
@@ -1158,31 +1191,37 @@
                 </div>
             </div>
 
-            <div class="box_shadow row mt-5">
+            <div class="box_shadow row mt-5" style="display: flex; justify-content: center; align-items: center;">
                 <div class="row mt-4" style="display: flex; justify-content: center;">
+                    <h3 id="greenAmCalc" style="text-align: center; margin-top: 1rem; margin-bottom: 1.5rem">Ammonia Production</h3>
+                    <span style="margin-bottom: 25px">Electrolytic ammonia is produced through the Haber Bosch process by reacting electrolytic    hydrogen with nitrogen. To be climate beneficial, the electrolytic hydrogen must be produced using low carbon energy. The ammonia plant modelled consists of an air separation unit, an ammonia synthesis loop, a refrigeration loop and ammonia storage. All of this is coupled to an electrolysis facility and runs continuously. Electrolytic ammonia production costs are calculated based on the three electrolysis technologies used for electrolytic hydrogen.</span>
                     <div class="col-md-11 p-8">
-                        <h3 style="text-align: center; margin-top: 1rem; margin-bottom: 1.5rem">Ammonia Production</h3>
                         <div class="row form-group mb-1">
                             <label class="col-md-3"></label>
                             <div class="col-md-9"
                                  style="display: flex; flex-direction: row; justify-content: space-between;">
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
                                     style="width:32.5%; text-align: center;">PEM
-                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                              data-bs-trigger="hover click"
                                               title="Proton Exchange Membrane Electrolyzer – See <a href='https://www.ise.fraunhofer.de/content/dam/ise/de/documents/presseinformationen/2022/0322_ISE_e_PR_Study_CATF.pdf'>CATF Fraunhofer study</a> for a detailed overview of this technology."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
                                     style="width:32.5%; text-align: center;">AEL
-                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="hover click"
+                                    <sup><img class="info" data-bs-toggle="tooltip" data-bs-html="true"
+                                              data-bs-trigger="hover click"
                                               title="Alkaline Electrolyzer – See <a href='https://www.ise.fraunhofer.de/content/dam/ise/de/documents/presseinformationen/2022/0322_ISE_e_PR_Study_CATF.pdf'>CATF Fraunhofer study</a> for a detailed overview of this technology."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                                 <h5 class="output_header green navy_col text-center p-1 rounded"
                                     style="width:32.5%; text-align: center;">SOEC
                                     <sup><img class="info" data-bs-toggle="tooltip"
                                               title="Solid Oxide Electrolyzer – See CATF study for a detailed overview of this technology."
-                                              data-bs-placement="top" width="10px" height="10px" src="./information.png"></sup>
+                                              data-bs-placement="top" width="10px" height="10px"
+                                              src="./information.png"></sup>
                                 </h5>
                             </div>
                         </div>
