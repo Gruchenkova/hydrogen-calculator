@@ -462,6 +462,10 @@ input[type="text"]:disabled {
     display: none!important;
 }
 
+.tooltip {
+    --bs-tooltip-opacity: 1!important;
+}
+
 li {
     margin-bottom: 0.8rem;
 }
