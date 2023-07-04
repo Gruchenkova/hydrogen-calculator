@@ -19,24 +19,39 @@
 <main id="loaderMain">
     <span class="loader"></span>
 </main>
+<div class="container" style="display: flex; align-items: center; justify-content: center;">
+    <div class="col-md-8" style="margin-top: 30px">
+        <h1>Hydrogen and Ammonia Financial Model</h1>
+        <div class="description">
+            CATF’s Hydrogen Financial Model allows users to <b>estimate the production costs for low-carbon and electrolytic hydrogen and ammonia,</b>
+            granting them a better understanding of the technical and economic drivers behind these costs.
+            The model can also help inform policy decisions by letting users calculate the impact of policies levers, such as tax credits or carbon pricing, on the costs of production.
+            </br>
+            </br>
+            To use this tool, simply adjust the inputs for the respective model.
+            The model will calculate the cost of production as well as provide a graphical breakdown for what’s contributing to the cost stack.
+            For more context regarding the assumptions, please hover over the information icons next to each variable name and see the notes listed below each model.
+        </div>
+    </div>
+</div>
+
 <div class="container" style="margin-top: 25px">
     <div class="row mb-5" style="display: flex; justify-content: center">
         <nav id="menu">
-            <div><a class="jump_link_btn blue -btn -txt" onclick="onHydrogen()">Low Carbon/Blue H<sub>2</sub></a></div>
-            <div><a class="jump_link_btn light_blue navy_col -btn" id="btnAmmonia" onclick="onAmmonia()">Blue Ammonia
-                Model</a></div>
-            <div><a class="jump_link_btn green -btn navy_col" onclick="onGreen()">Green Hydrogen Model</a></div>
-            <div><a class="jump_link_btn gray -btn navy_col" onclick="onGreenAm()">Electrolytic Ammonia Model</a></div>
+            <div><a class="jump_link_btn blue -btn -txt" onclick="onHydrogen()">Low Carbon 'Blue' H<sub>2</sub></a></div>
+            <div><a class="jump_link_btn light_blue navy_col -btn" id="btnAmmonia" onclick="onAmmonia()">Low Carbon 'Blue' NH<sub>3</sub></a></div>
+            <div><a class="jump_link_btn green -btn navy_col" onclick="onGreen()">Electrolytic H<sub>2</sub></a></div>
+            <div><a class="jump_link_btn green -btn navy_col" onclick="onGreenAm()">Electrolytic NH<sub>3</sub></a></div>
         </nav>
     </div>
 </div>
 
 <div class="container">
-    <div class="row mb-5" style="margin-top: 85px">
+    <div class="row mb-5" style="margin-top: 60px">
         <form action="" id="Dashboard">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center mb-3" id="hydrogenCalc">Low Carbon/Blue Hydrogen Financial Model</h1>
+                    <h1 class="text-center mb-3" id="hydrogenCalc">Low Carbon 'Blue' Hydrogen Financial Model</h1>
                 </div>
             </div>
             <div class="col-md-8 description">
@@ -532,7 +547,7 @@
         <form action="" id="Dashboard2">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center mb-3" id="ammoniaCalc">Low Carbon/Blue Ammonia Financial Model</h1>
+                    <h1 class="text-center mb-3" id="ammoniaCalc">Low Carbon 'Blue' Ammonia Financial Model</h1>
                 </div>
             </div>
             <div class="col-md-8 description">
@@ -944,7 +959,7 @@
         <form action="" id="Dashboard3">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center mb-3" id="greenCalc">Electrolytic/Green Hydrogen Financial Model</h1>
+                    <h1 class="text-center mb-3" id="greenCalc">Electrolytic Hydrogen and Ammonia Financial Model</h1>
                 </div>
             </div>
 <!--            <div class="col-md-8 description">-->
@@ -1052,7 +1067,7 @@
 
             <div class="box_shadow row mt-5" style="display: flex; justify-content: center; align-items: center;">
                 <div class="row mt-4" style="display: flex; justify-content: center;">
-                    <h3 style="text-align: center; margin-bottom: 1.5rem; margin-top: 1rem">Hydrogen Production</h3>
+                    <h3 style="text-align: center; margin-bottom: 1.5rem; margin-top: 1rem">Electrolytic Hydrogen Production</h3>
                     <span style="margin-bottom: 25px">
                     Electrolytic hydrogen is produced through electrolysis, a process where electricity is used to split water into hydrogen and oxygen. For hydrogen to be climate beneficial, the electricity used must be low carbon. Low carbon electricity can come from a variety of sources including solar, wind, hydropower, nuclear, geothermal or a combination of these sources if procured from a low-carbon grid. Hydrogen production costs for three electrolysis technologies are examined:
                     <ol>
@@ -1193,7 +1208,7 @@
 
             <div class="box_shadow row mt-5" style="display: flex; justify-content: center; align-items: center;">
                 <div class="row mt-4" style="display: flex; justify-content: center;">
-                    <h3 id="greenAmCalc" style="text-align: center; margin-top: 1rem; margin-bottom: 1.5rem">Ammonia Production</h3>
+                    <h3 id="greenAmCalc" style="text-align: center; margin-top: 1rem; margin-bottom: 1.5rem">Electrolytic Ammonia Production</h3>
                     <span style="margin-bottom: 25px">Electrolytic ammonia is produced through the Haber Bosch process by reacting electrolytic    hydrogen with nitrogen. To be climate beneficial, the electrolytic hydrogen must be produced using low carbon energy. The ammonia plant modelled consists of an air separation unit, an ammonia synthesis loop, a refrigeration loop and ammonia storage. All of this is coupled to an electrolysis facility and runs continuously. Electrolytic ammonia production costs are calculated based on the three electrolysis technologies used for electrolytic hydrogen.</span>
                     <div class="col-md-11 p-8">
                         <div class="row form-group mb-1">
