@@ -397,7 +397,8 @@ input[type="text"]:disabled {
     color: #012169 !important;
 }
 
-#accordionPlusMinus .accordion-button, #accordionPlusMinus2 .accordion-button {
+#accordionPlusMinus .accordion-button, #accordionPlusMinus2 .accordion-button,
+#accordionPlusMinus3 .accordion-button, #accordionPlusMinus4 .accordion-button {
     flex-direction: row-reverse;
     justify-content: start;
     margin-left: 0;
@@ -414,15 +415,18 @@ input[type="text"]:disabled {
     border: none!important;
 }
 
-#accordionPlusMinus .accordion-button:not(.collapsed), #accordionPlusMinus2 .accordion-button:not(.collapsed) {
+#accordionPlusMinus .accordion-button:not(.collapsed), #accordionPlusMinus2 .accordion-button:not(.collapsed),
+#accordionPlusMinus3 .accordion-button:not(.collapsed), #accordionPlusMinus4 .accordion-button:not(.collapsed) {
     color: #012169 !important;
 }
-#accordionPlusMinus .accordion-button:not(.collapsed)::after, #accordionPlusMinus2 .accordion-button:not(.collapsed)::after {
+#accordionPlusMinus .accordion-button:not(.collapsed)::after, #accordionPlusMinus2 .accordion-button:not(.collapsed)::after,
+#accordionPlusMinus3 .accordion-button:not(.collapsed)::after, #accordionPlusMinus4 .accordion-button:not(.collapsed)::after {
     margin-left: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 2'%3E%3Cpath fill='none' stroke='%230047BB' stroke-linecap='round' stroke-width='2' d='M8 1H1m7 0h7'/%3E%3C/svg%3E");
     transform-origin: 50% 25%;
 }
-#accordionPlusMinus .accordion-button::after, #accordionPlusMinus2 .accordion-button::after {
+#accordionPlusMinus .accordion-button::after, #accordionPlusMinus2 .accordion-button::after,
+#accordionPlusMinus3 .accordion-button::after, #accordionPlusMinus4 .accordion-button::after{
     width: 1.25rem;
     height: 1.25rem;
     content: "";
@@ -468,4 +472,16 @@ input[type="text"]:disabled {
 
 li {
     margin-bottom: 0.8rem;
+}
+
+table {
+    width: 50%;
+}
+
+th, td {
+    text-align: center;
+}
+
+table, th, td {
+    border: solid 1px;
 }
