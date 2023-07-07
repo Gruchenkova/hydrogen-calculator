@@ -89,8 +89,9 @@ function getElById(id) {
 }
 
 function buildValue(element) {
-  const value = element.value;
-  return value?.replace(/^[-+]?[0-9]*[.,]?[0-9]+$/g, "").replace("$", "").replace(",", "");
+  const value = element.value?.replace(/^[-+]?[0-9]*[.,]?[0-9]+$/g, "").replace("$", "").replace(",", "");
+  let shortVal = parseInt(value * 100) / 100 + '';
+  return shortVal;
 }
 
 let dashboard = null;
@@ -759,7 +760,7 @@ AmmoniaCalc.fn.getDefaultChartOpts = function() {
       afterDatasetsDraw(chart, args, pluginOpt) {
         const { ctx, scales: { x, y } } = chart;
         chart.data.datasets[0].data.forEach((datapoint, index) => {
-          const totalArray = [buildValue(getElById("amtotal1")), buildValue(getElById("amtotal2"))];
+          const totalArray = [buildValue(getElById("amtotal1")), (buildValue(getElById("amtotal2")) / 1).toFixed(1) + ''];
           totalArray.forEach((data, index) => {
             ctx.font = "bold";
             ctx.fillStyle = "#808080";
