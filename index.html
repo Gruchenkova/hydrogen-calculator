@@ -68,7 +68,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="100" step="0.01" id="gasVis">
+                                <input type="range" min="0" max="100" step="0.1" id="gasVis">
                                 <input type="text" class="form-control form-control-sm blueHydrogenInput" id="gas"
                                        data-cell="G11">
                             </div>
@@ -83,7 +83,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="200" step="0.01" id="electricityVis">
+                                <input type="range" min="0" max="200" step="1" id="electricityVis">
                                 <input type="text" class="form-control form-control-sm blueHydrogenInput"
                                        id="electricity"
                                        data-cell="G12">
@@ -99,7 +99,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="500" step="0.01" id="carbonVis">
+                                <input type="range" min="0" max="500" step="1" id="carbonVis">
                                 <input type="text" class="form-control form-control-sm blueHydrogenInput" id="carbon"
                                        data-cell="G13">
                             </div>
@@ -114,7 +114,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="1000" step="0.01" id="carbonPriceVis">
+                                <input type="range" min="0" max="1000" step="1" id="carbonPriceVis">
                                 <input type="text" class="form-control form-control-sm blueHydrogenInput"
                                        id="carbonPrice"
                                        data-cell="G14">
@@ -564,7 +564,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="100" step="0.01" id="gasAmVis">
+                                <input type="range" min="0" max="100" step="0.1" id="gasAmVis">
                                 <input type="text" class="form-control form-control-sm blueAmmoniaInput" id="gasAm"
                                        data-cell="G8">
                             </div>
@@ -579,7 +579,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="200" step="0.01" id="electricityAmVis">
+                                <input type="range" min="0" max="200" step="1" id="electricityAmVis">
                                 <input type="text" class="form-control form-control-sm blueAmmoniaInput"
                                        id="electricityAm"
                                        data-cell="G9">
@@ -595,7 +595,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="500" step="0.01" id="carbonAmVis">
+                                <input type="range" min="0" max="500" step="1" id="carbonAmVis">
                                 <input type="text" class="form-control form-control-sm blueAmmoniaInput" id="carbonAm"
                                        data-cell="G10">
                             </div>
@@ -609,7 +609,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="1000" step="0.01" id="carbonPriceAmVis">
+                                <input type="range" min="0" max="1000" step="1" id="carbonPriceAmVis">
                                 <input type="text" class="form-control form-control-sm blueAmmoniaInput"
                                        id="carbonPriceAm"
                                        data-cell="G11">
@@ -786,7 +786,7 @@
                                                     $16,100/m<sup>3</sup> for Water Gas Shift reactor catalyst, and
                                                     $20/kg ammonia catalyst.
                                                 </li>
-                                                <li>Tax credit</li>
+                                                <li>An $85 per tonne of carbon dioxide captured 45Q tax credit is applied in the financial model. </li>
                                             </ol>
                                         </div>
                                     </div>
@@ -962,17 +962,6 @@
                     <h1 class="text-center mb-3" id="greenCalc">Electrolytic Hydrogen and Ammonia Financial Model</h1>
                 </div>
             </div>
-<!--            <div class="col-md-8 description">-->
-<!--                <span>-->
-<!--                    Electrolytic hydrogen is produced through electrolysis, a process where electricity is used to split water into hydrogen and oxygen. For hydrogen to be climate beneficial, the electricity used must be low carbon. Low carbon electricity can come from a variety of sources including solar, wind, hydropower, nuclear, geothermal or a combination of these sources if procured from a low-carbon grid. Hydrogen production costs for three electrolysis technologies are examined:-->
-<!--                    <ol>-->
-<!--                        <li>Proton Exchange Membrane</li>-->
-<!--                        <li>Alkaline Membrane</li>-->
-<!--                        <li>Solid Oxide</li>-->
-<!--                    </ol>-->
-<!--                    CATF recently published a paper    on the limits of relying on falling electrolyzer costs to reduce the production cost of electrolytic hydrogen.-->
-<!--                </span>-->
-<!--            </div>-->
             <div class="row mt-3 box_shadow" style="display: flex; justify-content: center;">
                 <div class="col-md-4 p-4 input_wr">
                     <h5 class="output_header green navy_col text-center p-1 rounded">Electrolyzer Input</h5>
@@ -1000,7 +989,7 @@
                         </label>
                         <div class="col-md-4" style="width: 40%">
                             <div style="display: flex" class="input_range_wr">
-                                <input type="range" min="0" max="200" step="0.01" id="electricityGrVis">
+                                <input type="range" min="0" max="200" step="1" id="electricityGrVis">
                                 <input type="text" class="form-control form-control-sm greenHydrogenInput"
                                        id="electricityGr"
                                        data-cell="G10">
@@ -1204,7 +1193,103 @@
                         <canvas id="chart_container3" height="200px"></canvas>
                     </div>
                 </div>
+
+                <div class="container_acc">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-11 col-sm-12 col-xs-12">
+                            <div class="accordion" id="accordionPlusMinus3">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne3">
+                                        <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne3"
+                                                aria-expanded="true"
+                                                aria-controls="collapseOne3"
+                                        >
+                                            Notes
+                                        </button>
+                                    </h2>
+                                    <div
+                                            id="collapseOne3"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne3"
+                                            data-bs-parent="#accordionPlusMinus3"
+                                    >
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>The heat and material balance and other operating parameters for PEM and AEL electrolyzers are sourced from the <a href="https://www.ise.fraunhofer.de/content/dam/ise/de/documents/presseinformationen/2022/0322_ISE_e_PR_Study_CATF.pdf">CATF Fraunhofer study</a>. For SOEC electrolyzers, a specific system electricity  demand of 40kWh/kg H2 is obtained from the <a href="https://ispt.eu/publications/next-level-solid-oxide-electrolysis/">ISPT report</a> on solid oxide electrolysis.
+                                                </li>
+                                                <li>The calculations for PEM and AEL are based on a 1GW electrolysis facility built in the Netherlands and a 92MW facility for SOEC electrolysis.
+                                                </li>
+                                                <li>Financial modeling is done using 2020 as the base year, 3-year construction period, 8% real weighted cost of capital (WACC), 25-year project lifetime with no debt financing.
+                                                </li>
+                                                <li>Total Installed Costs (USD/kW) for Electrolyzers are based on the Institute of Sustainable Process Technology (ISPT) reports – See CAPEX assumptions information bar.
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>2020 (High)</th>
+                                                            <th>2030 (Low)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left">PEM</td>
+                                                            <td>2055</td>
+                                                            <td>950</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left">AEL</td>
+                                                            <td>1600</td>
+                                                            <td>835</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left">SOEC</td>
+                                                            <td>5480</td>
+                                                            <td>1370</td>
+                                                        </tr>
+                                                    </table>
+                                                </li>
+                                                <li>Fixed Operating Costs are assumed to be 3% of TIC for all electrolyzers and include stack replacement.
+                                                </li>
+                                                <li>Modeling was based on ‘start of run’ electrolyzer operations. Electrolyzer performance typically degrades by 1% annually but was not included in the modeling.
+                                                </li>
+                                                <li>PEM and AEL electrolyzer efficiency figures (kWhAC/kg)  are obtained from the <a href="https://www.ise.fraunhofer.de/content/dam/ise/de/documents/presseinformationen/2022/0322_ISE_e_PR_Study_CATF.pdf">CATF Fraunhofer study</a>,
+                                                    and the SOEC electrolysis efficiency is obtained from the <a href="https://ispt.eu/publications/next-level-solid-oxide-electrolysis/">2023 ISPT report</a>.
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>2020 (High)</th>
+                                                            <th>2030 (Low)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left">PEM</td>
+                                                            <td>55.1</td>
+                                                            <td>48.1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left">AEL</td>
+                                                            <td>53.4</td>
+                                                            <td>49.4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left">SOEC</td>
+                                                            <td>40.0</td>
+                                                            <td>40.0</td>
+                                                        </tr>
+                                                    </table>
+                                                </li>
+                                                <li>A $3 per kg H2 tax credit is applied in the financial model.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
 
             <div class="box_shadow row mt-5" style="display: flex; justify-content: center; align-items: center;">
                 <div class="row mt-4" style="display: flex; justify-content: center;">
@@ -1327,6 +1412,52 @@
                         <canvas id="chart_container4" height="200px"></canvas>
                     </div>
                 </div>
+
+                <div class="container_acc">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-11 col-sm-12 col-xs-12">
+                            <div class="accordion" id="accordionPlusMinus4">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne4">
+                                        <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne4"
+                                                aria-expanded="true"
+                                                aria-controls="collapseOne4"
+                                        >
+                                            Notes
+                                        </button>
+                                    </h2>
+                                    <div
+                                            id="collapseOne4"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne4"
+                                            data-bs-parent="#accordionPlusMinus4"
+                                    >
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>All notes for the electrolytic hydrogen model also apply to the electrolytic ammonia model.
+                                                </li>
+                                                <li>The heat and material balance and other operating parameters for the ammonia plant are sourced from the
+                                                    <a href="https://sintef.brage.unit.no/sintef-xmlui/bitstream/handle/11250/3010564/Arnaiz_Cloete_2022.pdf?sequence=1">‘Techno-economic assessment of blue and green ammonia as energy carriers in a low-carbon future’</a>
+                                                </li>
+                                                <li>Total Installed Costs for the ammonia plant used in this analysis are $434/tonne NH<sub>3</sub>/year and include the air separation unit, synthesis loop and storage.
+                                                </li>
+                                                <li>Fixed Operating Costs are assumed to be 3% of TIC for the ammonia plant.
+                                                </li>
+                                                <li>Capital and operating costs for hydrogen buffer storage to enable the ammonia plant to run continuously at low electrolyzer loads were not included. As such, ammonia production costs are more accurate at relatively high-capacity factors (>80%) and will be underestimated for lower capacity factors.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </form>
 
