@@ -90,7 +90,7 @@ function getElById(id) {
 
 function buildValue(element) {
   const value = element.value?.replace(/^[-+]?[0-9]*[.,]?[0-9]+$/g, "").replace("$", "").replace(",", "");
-  let shortVal = parseInt(value * 100) / 100 + '';
+  let shortVal = Number(value).toFixed(1) + '';
   return shortVal;
 }
 
@@ -243,9 +243,9 @@ HydrogenCalc.fn.drawChart = function() {
   chartOpts.data.datasets = [{
     label: "Carbon Credit",
     data: [
-      self.getVal("BaseCase", "K128"),
-      self.getVal("BaseCase", "L128"),
-      self.getVal("BaseCase", "M128")
+      self.getVal("BaseCase", "K128").toFixed(1) + '',
+      self.getVal("BaseCase", "L128").toFixed(1) + '',
+      self.getVal("BaseCase", "M128").toFixed(1) + ''
     ],
     backgroundColor: [
       "rgba(25, 9, 232, 0.2)"
@@ -258,9 +258,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "Carbon Tax",
       data: [
-        self.getVal("BaseCase", "K127"),
-        self.getVal("BaseCase", "L127"),
-        self.getVal("BaseCase", "M127")
+        self.getVal("BaseCase", "K127").toFixed(1) + '',
+        self.getVal("BaseCase", "L127").toFixed(1) + '',
+        self.getVal("BaseCase", "M127").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(173,171,68,0.2)"
@@ -273,9 +273,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "CO2 T&S",
       data: [
-        self.getVal("BaseCase", "K126"),
-        self.getVal("BaseCase", "L126"),
-        self.getVal("BaseCase", "M126")
+        self.getVal("BaseCase", "K126").toFixed(1) + '',
+        self.getVal("BaseCase", "L126").toFixed(1) + '',
+        self.getVal("BaseCase", "M126").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(136,98,65,0.2)"
@@ -288,9 +288,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "Water",
       data: [
-        self.getVal("BaseCase", "K125"),
-        self.getVal("BaseCase", "L125"),
-        self.getVal("BaseCase", "M125")
+        self.getVal("BaseCase", "K125").toFixed(1) + '',
+        self.getVal("BaseCase", "L125").toFixed(1) + '',
+        self.getVal("BaseCase", "M125").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(66,93,164,0.2)"
@@ -303,9 +303,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "Electricity",
       data: [
-        self.getVal("BaseCase", "K124"),
-        self.getVal("BaseCase", "L124"),
-        self.getVal("BaseCase", "M124")
+        self.getVal("BaseCase", "K124").toFixed(1) + '',
+        self.getVal("BaseCase", "L124").toFixed(1) + '',
+        self.getVal("BaseCase", "M124").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(68,134,60,0.2)"
@@ -318,9 +318,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "Natural Gas",
       data: [
-        self.getVal("BaseCase", "K123"),
-        self.getVal("BaseCase", "L123"),
-        self.getVal("BaseCase", "M123")
+        self.getVal("BaseCase", "K123").toFixed(1) + '',
+        self.getVal("BaseCase", "L123").toFixed(1) + '',
+        self.getVal("BaseCase", "M123").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgb(167,186,227)"
@@ -333,9 +333,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "Fixed OPEX",
       data: [
-        self.getVal("BaseCase", "K122"),
-        self.getVal("BaseCase", "L122"),
-        self.getVal("BaseCase", "M122")
+        self.getVal("BaseCase", "K122").toFixed(1) + '',
+        self.getVal("BaseCase", "L122").toFixed(1) + '',
+        self.getVal("BaseCase", "M122").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(61,65,63,0.2)"
@@ -348,9 +348,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "CAPEX",
       data: [
-        self.getVal("BaseCase", "K121"),
-        self.getVal("BaseCase", "L121"),
-        self.getVal("BaseCase", "M121")
+        self.getVal("BaseCase", "K121").toFixed(1) + '',
+        self.getVal("BaseCase", "L121").toFixed(1) + '',
+        self.getVal("BaseCase", "M121").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(238,96,96,0.2)"
@@ -363,9 +363,9 @@ HydrogenCalc.fn.drawChart = function() {
     {
       label: "Power Export",
       data: [
-        self.getVal("BaseCase", "K120"),
-        self.getVal("BaseCase", "L120"),
-        self.getVal("BaseCase", "M120")
+        self.getVal("BaseCase", "K120").toFixed(1) + '',
+        self.getVal("BaseCase", "L120").toFixed(1) + '',
+        self.getVal("BaseCase", "M120").toFixed(1) + ''
       ],
       backgroundColor: "rgba(75,97,182,0.2)",
       borderColor: [
@@ -785,8 +785,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "Carbon Credit",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G127"),
-        self2.getVal("KBRPurifierList2", "C127")
+        self2.getVal("KBRPurifierReferenceCase", "G127").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C127").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(25, 9, 232, 0.2)"
@@ -799,8 +799,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "Carbon Tax",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G126"),
-        self2.getVal("KBRPurifierList2", "C126")
+        self2.getVal("KBRPurifierReferenceCase", "G126").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C126").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(173,171,68,0.2)"
@@ -813,8 +813,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "CO2 T&S",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G125"),
-        self2.getVal("KBRPurifierList2", "C125")
+        self2.getVal("KBRPurifierReferenceCase", "G125").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C125").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(136,98,65,0.2)"
@@ -827,8 +827,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "Water",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G124"),
-        self2.getVal("KBRPurifierList2", "C124")
+        self2.getVal("KBRPurifierReferenceCase", "G124").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C124").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(66,93,164,0.2)"
@@ -841,8 +841,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "Electricity",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G123"),
-        self2.getVal("KBRPurifierList2", "C123")
+        self2.getVal("KBRPurifierReferenceCase", "G123").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C123").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(68,134,60,0.2)"
@@ -855,8 +855,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "Natural Gas",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G122"),
-        self2.getVal("KBRPurifierList2", "C122")
+        self2.getVal("KBRPurifierReferenceCase", "G122").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C122").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgb(167,186,227)"
@@ -869,8 +869,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "Fixed OPEX",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G121"),
-        self2.getVal("KBRPurifierList2", "C121")
+        self2.getVal("KBRPurifierReferenceCase", "G121").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C121").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(61,65,63,0.2)"
@@ -883,8 +883,8 @@ AmmoniaCalc.fn.drawChart = function() {
     {
       label: "CAPEX",
       data: [
-        self2.getVal("KBRPurifierReferenceCase", "G120"),
-        self2.getVal("KBRPurifierList2", "C120")
+        self2.getVal("KBRPurifierReferenceCase", "G120").toFixed(1) + '',
+        self2.getVal("KBRPurifierList2", "C120").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(238,96,96,0.2)"
@@ -1283,9 +1283,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
   chartOpts3.data.datasets = [{
     label: "CAPEX",
     data: [
-      self3.getVal("H2PEM", "H89"),
-      self3.getVal("H2AEL", "C89"),
-      self3.getVal("H2SOEC", "C89")
+      self3.getVal("H2PEM", "H89").toFixed(1) + '',
+      self3.getVal("H2AEL", "C89").toFixed(1) + '',
+      self3.getVal("H2SOEC", "C89").toFixed(1) + ''
     ],
     backgroundColor: [
       "rgba(238,96,96,0.2)"
@@ -1298,9 +1298,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Tax Credit",
       data: [
-        self3.getVal("H2PEM", "H88"),
-        self3.getVal("H2AEL", "C88"),
-        self3.getVal("H2SOEC", "C88")
+        self3.getVal("H2PEM", "H88").toFixed(1) + '',
+        self3.getVal("H2AEL", "C88").toFixed(1) + '',
+        self3.getVal("H2SOEC", "C88").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(173,171,68,0.2)"
@@ -1313,9 +1313,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Fixed OPEX",
       data: [
-        self3.getVal("H2PEM", "H87"),
-        self3.getVal("H2AEL", "C87"),
-        self3.getVal("H2SOEC", "C87")
+        self3.getVal("H2PEM", "H87").toFixed(1) + '',
+        self3.getVal("H2AEL", "C87").toFixed(1) + '',
+        self3.getVal("H2SOEC", "C87").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(61,65,63,0.2)"
@@ -1328,9 +1328,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Water",
       data: [
-        self3.getVal("H2PEM", "H86"),
-        self3.getVal("H2AEL", "C86"),
-        self3.getVal("H2SOEC", "C86")
+        self3.getVal("H2PEM", "H86").toFixed(1) + '',
+        self3.getVal("H2AEL", "C86").toFixed(1) + '',
+        self3.getVal("H2SOEC", "C86").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(66,93,164,0.2)"
@@ -1343,9 +1343,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Electricity",
       data: [
-        self3.getVal("H2PEM", "H85"),
-        self3.getVal("H2AEL", "C85"),
-        self3.getVal("H2SOEC", "C85")
+        self3.getVal("H2PEM", "H85").toFixed(1) + '',
+        self3.getVal("H2AEL", "C85").toFixed(1) + '',
+        self3.getVal("H2SOEC", "C85").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(68,134,60,0.2)"
@@ -1373,9 +1373,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
   chartOpts4.data.datasets = [{
     label: "CAPEX",
     data: [
-      self3.getVal("NH3PEM", "G89"),
-      self3.getVal("NH3AEL", "C89"),
-      self3.getVal("NH3SOEC", "C90")
+      self3.getVal("NH3PEM", "G89").toFixed(1) + '',
+      self3.getVal("NH3AEL", "C89").toFixed(1) + '',
+      self3.getVal("NH3SOEC", "C90").toFixed(1) + ''
     ],
     backgroundColor: [
       "rgba(238,96,96,0.2)"
@@ -1388,9 +1388,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Tax Credit",
       data: [
-        self3.getVal("NH3PEM", "G88"),
-        self3.getVal("NH3AEL", "C88"),
-        self3.getVal("NH3SOEC", "C89")
+        self3.getVal("NH3PEM", "G88").toFixed(1) + '',
+        self3.getVal("NH3AEL", "C88").toFixed(1) + '',
+        self3.getVal("NH3SOEC", "C89").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(173,171,68,0.2)"
@@ -1403,9 +1403,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Fixed OPEX",
       data: [
-        self3.getVal("NH3PEM", "G87"),
-        self3.getVal("NH3AEL", "C87"),
-        self3.getVal("NH3SOEC", "C88")
+        self3.getVal("NH3PEM", "G87").toFixed(1) + '',
+        self3.getVal("NH3AEL", "C87").toFixed(1) + '',
+        self3.getVal("NH3SOEC", "C88").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(61,65,63,0.2)"
@@ -1418,9 +1418,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Water",
       data: [
-        self3.getVal("NH3PEM", "G86"),
-        self3.getVal("NH3AEL", "C86"),
-        self3.getVal("NH3SOEC", "C87")
+        self3.getVal("NH3PEM", "G86").toFixed(1) + '',
+        self3.getVal("NH3AEL", "C86").toFixed(1) + '',
+        self3.getVal("NH3SOEC", "C87").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(66,93,164,0.2)"
@@ -1433,9 +1433,9 @@ GreenHydrogenCalc.fn.drawChart = function() {
     {
       label: "Electricity",
       data: [
-        self3.getVal("NH3PEM", "G85"),
-        self3.getVal("NH3AEL", "C85"),
-        self3.getVal("NH3SOEC", "C86")
+        self3.getVal("NH3PEM", "G85").toFixed(1) + '',
+        self3.getVal("NH3AEL", "C85").toFixed(1) + '',
+        self3.getVal("NH3SOEC", "C86").toFixed(1) + ''
       ],
       backgroundColor: [
         "rgba(68,134,60,0.2)"
