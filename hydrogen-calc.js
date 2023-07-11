@@ -193,6 +193,8 @@ HydrogenCalc.fn.getDefaultChartOpts = function() {
       datasets: []
     },
     options: {
+      response: false,
+      maintainAspectRatio: false,
       plugins: {
         datalabels: {
           formatter: function(value, context) {
@@ -630,7 +632,7 @@ function buildNewCanvasHydrogenCalc() {
         }
       ];
       getElById("canvas_wr").innerHTML = "";
-      getElById("canvas_wr").innerHTML = "<canvas id=\"chart_container\" height=\"200px\"></canvas>";
+      getElById("canvas_wr").innerHTML = "<canvas id=\"chart_container\" height=\"400px\"></canvas>";
       this.chart = new Chart(getElById("chart_container"), chartOpts);
     }, 3000);
   }
@@ -735,6 +737,8 @@ AmmoniaCalc.fn.getDefaultChartOpts = function() {
       datasets: []
     },
     options: {
+      response: false,
+      maintainAspectRatio: false,
       plugins: {
         datalabels: {
           formatter: function(value, context) {
@@ -1030,7 +1034,7 @@ function buildNewCanvasAmmoniaCalc() {
           borderWidth: 1
         }];
       $("#canvas_wr2").html(""); //remove canvas from container
-      $("#canvas_wr2").html("   <canvas id=\"chart_container2\" height=\"200px\"></canvas>"); //add it back to the container
+      $("#canvas_wr2").html("   <canvas id=\"chart_container2\" height=\"400px\"></canvas>"); //add it back to the container
       this.chart2 = new Chart(getElById("chart_container2"), chartOpts2);
     }, 3000);
 
@@ -1219,6 +1223,8 @@ GreenHydrogenCalc.fn.getDefaultChartOpts = function() {
       datasets: []
     },
     options: {
+      response: false,
+      maintainAspectRatio: false,
       plugins: {
         datalabels: {
           formatter: function(value, context) {
@@ -1633,11 +1639,11 @@ function buildNewCanvasGreenCalc() {
       ];
 
       getElById("canvas_wr3").innerHTML = ""; //remove canvas from container
-      getElById("canvas_wr3").innerHTML = "<canvas id=\"chart_container3\" height=\"200px\"></canvas>"; //add it back to the container
+      getElById("canvas_wr3").innerHTML = "<canvas id=\"chart_container3\" height=\"400px\"></canvas>"; //add it back to the container
       this.chart3 = new Chart(getElById("chart_container3"), chartOpts3);
 
       getElById("canvas_wr4").innerHTML = ""; //remove canvas from container
-      getElById("canvas_wr4").innerHTML = "<canvas id=\"chart_container4\" height=\"200px\"></canvas>"; //add it back to the container
+      getElById("canvas_wr4").innerHTML = "<canvas id=\"chart_container4\" height=\"400px\"></canvas>"; //add it back to the container
       this.chart4 = new Chart(getElById("chart_container4"), chartOpts4);
     }, 3000);
 
